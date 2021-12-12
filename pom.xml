@@ -66,6 +66,13 @@
 
     <repositories>
         <repository>
+            <id>nexus-release</id>
+            <url>http://192.168.1.10:8081/repository/nexus-release/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+        <repository>
             <id>nexus-snapshot</id>
             <url>http://192.168.1.10:8081/repository/maven-snapshots/</url>
             <snapshots>
@@ -75,6 +82,10 @@
     </repositories>
 
     <distributionManagement>
+        <repository>
+            <id>nexus-release</id>
+            <url>http://192.168.1.10:8081/repository/nexus-release/</url>
+        </repository>
         <snapshotRepository>
             <id>nexus-snapshot</id>
             <url>http://192.168.1.10:8081/repository/maven-snapshots/</url>
